@@ -52,7 +52,7 @@ For any update of this library check Releases.
      
    6. Once all the packages are installed successfully 
    
-      just copy and paste the [simpleUsage.md]() in your program.cs file present in your project.
+      just copy and paste the [simpleUsage.md](https://github.com/hellovikram/pepipost-csharp/blob/master/simpleUsage.md) in your program.cs file present in your project.
       
       build the project shown below OR by clicking **F8**
       
