@@ -1,4 +1,4 @@
-# Step to install C# Library using Mono IDE
+# Step to install C# Library using Mono-Develop IDE
 
 This library will help you to speed up the integration with Pepipost API v2 
 
@@ -10,7 +10,10 @@ we would want you to create issues and pull requests or simply upvote or comment
 For any update of this library check Releases.
 
 ## Prerequisites
-   
+
+   * [dotnet SDK](https://www.microsoft.com/net/download/dotnet-core/2.0) (> 2.0)
+   * [mono devel](https://www.mono-project.com/download/stable/)
+   * [Mono-develop IDE](https://www.monodevelop.com/download/)
    * [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)(>= 1.6.1)
    * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)(>= 11.0.2)
    * [Pepipost](https://www.nuget.org/packages/Pepipost/)
@@ -48,7 +51,7 @@ For any update of this library check Releases.
       
       ![monol6](http://app1.falconide.com/integration_imgs/csharp-mono/l6.png)
       
-      **Pepipost library**
+      Select **official C# library Pepipost**
       
       ![monol7](https://app1.falconide.com/integration_imgs/csharp-mono/l7.png)
      
