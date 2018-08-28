@@ -1,4 +1,4 @@
-# Simple Usage C# file
+# Simple Usage in C# to send email
 
 ```csharp
 using System;
@@ -23,28 +23,32 @@ namespace TestConsoleProject
             EmailController email = client.Email;
             EmailBody body = new EmailBody();
 
-            string apiKey = "Your api key here";
+            string apiKey = "Your api key here"; //Add your Pepipost APIkey from panel here
 
             body.Personalizations = new List<Personalizations>();
 
             Personalizations body_personalizations_0 = new Personalizations();
-
-            body_personalizations_0.Recipient = "rcptemail id here";
+	    
+	    // List of Email Recipients
+            body_personalizations_0.Recipient = "recipient@exampledomain.com"; //To/Recipient email address
             body_personalizations_0.Attributes = APIHelper.JsonDeserialize<Object>("{}");
             body.Personalizations.Add(body_personalizations_0);
 
             body.From = new From();
-
-            body.From.FromEmail = "info@your verified domain";
-            body.From.FromName = "pepi";
-            body.Subject = "Pepipost";
-            body.Content = "<html><body>Hello Folks,<br><br>Congratulations, Integration is Successfully Completed.<br>This is your first email from Pepipost C# library.<br>Happy Emailing<br><br>Thanks,<br>Pepipost";
+            
+	    // Email Header
+            body.From.FromEmail = "sender@exampledomain.com"; //Sender Email Address. Please note that the sender domain @exampledomain.com should be verified and active under your Pepipost account.
+            body.From.FromName = "Pepi"; //Sender/From name
+	    
+	    //Email Body Content
+            body.Subject = "Pepipost Test Email"; //Subject of email
+            body.Content = "<html><body>Hey,<br><br>Congratulations, Integration is Successfully Completed.<br>This is your first email from Pepipost C# library.<br>Happy Emailing<br><br>Thanks,<br>Pepipost";
             body.Settings = new Settings();
 
             body.Settings.Footer = 0;
-            body.Settings.Clicktrack = 1;
-            body.Settings.Opentrack = 1;
-            body.Settings.Unsubscribe = 1;
+            body.Settings.Clicktrack = 1; //Clicktrack for emails enable=1 | disable=0
+            body.Settings.Opentrack = 1; //Opentrack for emails enable=1 | disable=0
+            body.Settings.Unsubscribe = 1; //Unsubscribe for emails enable=1 | disable=0
 			SendEmailResponse result = email.CreateSendEmailAsync(apiKey, body).Result;
 
             try
