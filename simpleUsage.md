@@ -1,3 +1,6 @@
+#Simple Usage C# file
+
+`csharp
 using System;
 using System.Collections.Generic;
 using Pepipost.Controllers;
@@ -9,7 +12,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 
-namespace myTestConsole
+namespace TestConsoleProject
 {
     class MainClass
     {
