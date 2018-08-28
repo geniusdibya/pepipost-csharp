@@ -1,6 +1,6 @@
 #Simple Usage C# file
 
-`csharp
+```csharp
 using System;
 using System.Collections.Generic;
 using Pepipost.Controllers;
@@ -62,3 +62,4 @@ namespace TestConsoleProject
         }
     }
 }
+```
