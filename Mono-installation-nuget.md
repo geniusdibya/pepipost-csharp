@@ -15,7 +15,6 @@ For any update of this library check Releases.
    * [mono devel](https://www.mono-project.com/download/stable/)
    * [Mono-develop IDE](https://www.monodevelop.com/download/)
    * [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/)(>= 1.6.1)
-   * [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)(>= 11.0.2)
    * [Pepipost](https://www.nuget.org/packages/Pepipost/)
    * A free account on [Pepipost](https://app.pepipost.com/index.php/signup/registeruser). If you don't have a one, click here to sign-up and get 30,000 emails free every month.
  
@@ -46,11 +45,7 @@ For any update of this library check Releases.
    5. Let's add Nuget package dependencies as described earlier
    
       ![mono15](http://app1.falconide.com/integration_imgs/csharp-mono/l5.png)
-      
-      **Newtonsoft.Json**
-      
-      ![monol6](http://app1.falconide.com/integration_imgs/csharp-mono/l6.png)
-      
+          
       Select **official C# library Pepipost**
       
       ![monol7](https://app1.falconide.com/integration_imgs/csharp-mono/l7.png)
