@@ -17,18 +17,24 @@ If you are using Visual Studio for development and want to integrated with Pepip
     Unzip the SDK on any Location of your choice (we will unzipped in directory named testSDK)
             
     OR ```git clone https://github.com/pepipost/pepipost-sdk-csharp.git```
+    
+    ![step1](http://app1.falconide.com/integration_imgs/csharp-vs/final-1.png)
+    
+    ![s2](http://app1.falconide.com/integration_imgs/csharp-vs/final-2.png)
+    
+    ![s3](http://app1.falconide.com/integration_imgs/csharp-vs/final-3.png)
+    
+    ![s4](http://app1.falconide.com/integration_imgs/csharp-vs/final-4.png)
       
  2. For starting a new project, right click on the current solution from the *Solution Explorer* 
  
     Choose  *Add -> New Project*.
 
-    ![Add a new project in the existing solution using Visual Studio](https://apidocs.io/illustration/cs?step=addProject&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
-
+    ![Add a new project in the existing solution using Visual Studio](http://app1.falconide.com/integration_imgs/csharp-vs/final-5.png)
 
  3. Next, choose "Console Application", provide a *TestConsoleProject* as the project name and click *OK*.
 
-    ![Create a new console project using Visual Studio](https://apidocs.io/illustration/cs?step=createProject&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
-
+    ![Set the new cosole project as the start up project](http://app1.falconide.com/integration_imgs/csharp-vs/final-6.png)
 
  4. **Set as startup project**
 
@@ -37,8 +43,8 @@ If you are using Visual Studio for development and want to integrated with Pepip
     To do this, right-click on the  *TestConsoleProject*
     
     Choose  *Set as StartUp Project* from the context menu.
-
-    ![Set the new cosole project as the start up project](https://apidocs.io/illustration/cs?step=setStartup&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+    
+    ![s7](http://app1.falconide.com/integration_imgs/csharp-vs/final-7.png)
 
 
  5. **Add reference of the library project**
@@ -49,7 +55,7 @@ If you are using Visual Studio for development and want to integrated with Pepip
     
     Click *Add Reference*.
 
-    ![This Opens the references for the TestConsoleProject](https://apidocs.io/illustration/cs?step=addReference&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+    ![This Opens the references for the TestConsoleProject](http://app1.falconide.com/integration_imgs/csharp-vs/final-8.png)
 
     Next, a window will be displayed where we must set the *Checkbox* on *PepipostAPI.Standard* 
     
@@ -57,7 +63,7 @@ If you are using Visual Studio for development and want to integrated with Pepip
     
     By doing this, we have added a reference of the *PepipostAPI.Standard* project into the new *TestConsoleProject*.
 
-    ![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=createReference&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+    ![Add a reference to the TestConsoleProject](http://app1.falconide.com/integration_imgs/csharp-vs/final-9.png)
  
  6. Once all the packages are installed and **TestConsoleProject** is created, a file named *Program.cs* will be visible in the *Solution Explorer* with an empty *Main* method.
  
@@ -65,7 +71,7 @@ If you are using Visual Studio for development and want to integrated with Pepip
 
    Here, you can add [simpleUsage.md code](https://github.com/hellovikram/pepipost-csharp/blob/master/simpleUsage.md) 
 
-  ![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=addCode&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+  ![Add a reference to the TestConsoleProject](http://app1.falconide.com/integration_imgs/csharp-vs/final-10.png)
 
  7. Update the api_key and FromEmail parameters:
 
@@ -81,6 +87,8 @@ If you are using Visual Studio for development and want to integrated with Pepip
       ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
      
   9.  Build the project to finally send your first test email Run the project.
+  
+      ![build](http://app1.falconide.com/integration_imgs/csharp-vs/final-11.png)
    
       Run the project by hiting **Ctrl + F5**
       
