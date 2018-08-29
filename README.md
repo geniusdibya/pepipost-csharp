@@ -66,9 +66,39 @@
 
   1. Download File from [Github](https://github.com/pepipost/pepipost-sdk-csharp/archive/master.zip) unzipped file to your desired location.
   
-  2. Start Visual Studio 2017
+  2. Start Microsoft Visual Studio 2017
   
-    ![]
+     **File -> New -> Project**
+  
+     ![s1](http://app1.falconide.com/integration_imgs/csharp-vs/screen-1.png)
+     
+  3. Give Desired name to your project 
+    
+     *TestConsoleProject recommended* 
+  
+     ![s2](http://app1.falconide.com/integration_imgs/csharp-vs/screen-2.png)
+     
+  4. Installing Dependencies through Nuget Package installer
+  
+     ![s3](http://app1.falconide.com/integration_imgs/csharp-vs/screen-3.png)
+     
+     Browse and Search for **Pepipost - The Official C# library**
+     
+     ![s4](http://app1.falconide.com/integration_imgs/csharp-vs/screen-4.png)
+   
+  5. Install the selected package
+    
+     ![s5](http://app1.falconide.com/integration_imgs/csharp-vs/screen-5.png)
+     
+  6. Once all packages are install the solution explorer will look like below
+  
+     ![s6](http://app1.falconide.com/integration_imgs/csharp-vs/screen-6.png)
+     
+  7. Making Changes in **api_key** and **Sending Domain**
+  
+     
+     
+     
     
 <a name="announcements"></a>
 # Announcements
