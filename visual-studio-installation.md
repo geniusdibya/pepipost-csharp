@@ -18,19 +18,19 @@ If you are using Visual Studio for development and want to integrated with Pepip
             
     OR ```git clone https://github.com/pepipost/pepipost-sdk-csharp.git```
     
-    ![step1](http://app1.falconide.com/integration_imgs/csharp-vs/final-1.png)
+ 2. For starting a new project, right click on the current solution from the *Solution Explorer* 
+ 
+    Choose  *Add -> New Project*.
+    
+    ![s1](http://app1.falconide.com/integration_imgs/csharp-vs/final-1.png)
     
     ![s2](http://app1.falconide.com/integration_imgs/csharp-vs/final-2.png)
     
     ![s3](http://app1.falconide.com/integration_imgs/csharp-vs/final-3.png)
     
     ![s4](http://app1.falconide.com/integration_imgs/csharp-vs/final-4.png)
-      
- 2. For starting a new project, right click on the current solution from the *Solution Explorer* 
- 
-    Choose  *Add -> New Project*.
-
-    ![Add a new project in the existing solution using Visual Studio](http://app1.falconide.com/integration_imgs/csharp-vs/final-5.png)
+    
+    ![s5](http://app1.falconide.com/integration_imgs/csharp-vs/final-5.png)
 
  3. Next, choose "Console Application", provide a *TestConsoleProject* as the project name and click *OK*.
 
