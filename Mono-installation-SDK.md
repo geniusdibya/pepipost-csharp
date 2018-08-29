@@ -60,63 +60,55 @@
    
       a. Adding Reference 
       
-         ![dep1](http://app1.falconide.com/integration_imgs/csharp-mono/7.png)
+      ![dep1](http://app1.falconide.com/integration_imgs/csharp-mono/7.png)
       
-         Select **Edit Reference**
+      Select **Edit Reference**
+        
+      ![dep2](http://app1.falconide.com/integration_imgs/csharp-mono/8.png)
+        
+      Select **Pepipost -> OK**
          
-         ![dep2](http://app1.falconide.com/integration_imgs/csharp-mono/8.png)
-         
-         Select **Pepipost -> OK**
-         
-         ![dep3](http://app1.falconide.com/integration_imgs/csharp-mono/9.png)
+      ![dep3](http://app1.falconide.com/integration_imgs/csharp-mono/9.png)
          
        b. Adding packages
        
-          ![dep4](http://app1.falconide.com/integration_imgs/csharp-mono/10.png)
+       ![dep4](http://app1.falconide.com/integration_imgs/csharp-mono/10.png)
           
-          search **NewtonSoft.json -> Add packages**
+       search **NewtonSoft.json -> Add packages**
           
-          ![dep5](http://app1.falconide.com/integration_imgs/csharp-mono/11.png)
+       ![dep5](http://app1.falconide.com/integration_imgs/csharp-mono/11.png)
           
-     8. Once all the packages are installed successfully 
+   8. Once all the packages are installed successfully 
    
-        just copy and paste the [simpleUsage.md](https://github.com/hellovikram/pepipost-csharp/blob/master/simpleUsage.md) in your program.cs file present in your project.
+      just copy and paste the [simpleUsage.md](https://github.com/hellovikram/pepipost-csharp/blob/master/simpleUsage.md) in your program.cs file present in your project.
       
-        build the project shown below OR by clicking **F8**
+      build the project shown below OR by clicking **F8**
       
-        ![monol8](http://app1.falconide.com/integration_imgs/csharp-mono/l8.png)
+      ![monol8](http://app1.falconide.com/integration_imgs/csharp-mono/l8.png)
         
-     9.  Grab your **Api_key** and verified **Sending Domain**
+   9.  Grab your **Api_key** and verified **Sending Domain**
    
-        * apikey will be available under Login to Pepipost -> Settings -> Integration
-        * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
+       * apikey will be available under Login to Pepipost -> Settings -> Integration
+       * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
       
-     10. Change apikey and Sending Domain in script 
+   10. Change apikey and Sending Domain in script 
    
-         ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
+       ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
            
-         ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
+       ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
      
-         ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
+       ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
      
-     11.  Building Project to Send Email
+   11.  Building Project to Send Email
    
-          Run the project Press **ctrl + F5**
+        Run the project Press **ctrl + F5**
       
-          If your apikey and sending domain is proper response message will be success 
+        If your apikey and sending domain is proper response message will be success 
       
-          ![monol9](http://app1.falconide.com/integration_imgs/csharp-mono/l9.png)
+        ![monol9](http://app1.falconide.com/integration_imgs/csharp-mono/l9.png)
       
-          If there is some problem related with config Error message will be Shown
+        If there is some problem related with config Error message will be Shown
       
-          ![mono10](http://app1.falconide.com/integration_imgs/csharp-mono/l10.png)
-     
-         
-         
-         
-         
-         
-         
-         
-      b. 
+        ![mono10](http://app1.falconide.com/integration_imgs/csharp-mono/l10.png)
+
       
