@@ -9,13 +9,15 @@
 
 ## Overview
 
-  This library allows you to fasten up your integration with Pepipost web API v2
-  
-  2.5.0 version of this library provides full access of functionality with respect to send email using v2 API
-  
-  The goal is to simplify the complexity and minimize the requirements of integration for making the library Community Driven. To help us in building the right things in proper order we would request you to help us by sharing valuable comments, creating new [issues]() and [pull requests]()
+This library contains methods for easily interacting with the Pepipost Email Sending API to send emails within few seconds.
 
-  For any update of this library check [Releases]().
+We are trying to make our libraries Community Driven- which means we need your help in building the right things in proper order we would request you to help us by sharing comments, creating new issues or pull requests.
+
+We welcome any sort of contribution to this library.
+
+The latest 2.5.0 version of this library provides is fully compatible with the latest Pepipost v2.0 API.
+
+For any update of this library check [Releases]().
 
 # Table of Content
   
@@ -39,28 +41,28 @@
    
 ## IDE Specific installation
 
-  In order to use Pepipost C# library you can either directly download [Pepipost C# .NET library from our Git Repo]() OR if your have Nuget Package manager installed, you can search and download from the Package manager
+In order to use Pepipost C# library you can either directly download [Pepipost C# .NET library from our GIT Repo]() or if you have Nuget Package manager installed, you can search and download Pepipost from the package manager.
   
-  Pepipost C# .NET library is compatible with Windows Forms, Windows RT, Windows Phone 8, Silverlight 5, Xamarin iOS, Xamarin Android and Mono.
+Pepipost C# .NET library is compatible with Windows Forms, Windows RT, Windows Phone 8, Silverlight 5, Xamarin iOS, Xamarin Android and Mono.
   
-  We have demonstrated the installation with two IDEs which consists of Mono-Develop and Visual Studio 2017
+We have demonstrated the installation with two IDEs which consists of Mono-Develop and Visual Studio 2017. We welcome contribution for other IDEs.
   
-  * Installation with Mono-Develop
+1. Installation using Mono-Develop
   
     * [Using Nuget package manager](https://github.com/hellovikram/pepipost-csharp/blob/master/Mono-installation-nuget.md). 
   
     * [Using Github Repository](https://github.com/hellovikram/pepipost-csharp/blob/master/Mono-installation-SDK.md)
-    
-  * Installation with Microsoft Visual Studio
+
+1. Installation using Microsoft Visual Studio
   
-    * [using Nuget Package manager](#quick-start)
+    * [Using Nuget Package manager](#quick-start)
     
-    * [using Github Reposistory](https://github.com/hellovikram/pepipost-csharp/blob/master/visual-studio-installation.md)
+    * [Using GitHub Reposistory](https://github.com/hellovikram/pepipost-csharp/blob/master/visual-studio-installation.md)
     
 <a name="quick-start"></a>
 # Quick Start
 
-## How to Build
+## How to Build- Using Nuget Package Manager on MS Visual Studio
   
   1. Start Microsoft Visual Studio 2017
   
@@ -68,118 +70,57 @@
   
      ![s1](http://app1.falconide.com/integration_imgs/csharp-vs/screen-1.png)
      
-  2. Give Desired name to your project 
+     
+  2. Give desired name to your project:
     
      *TestConsoleProject recommended* 
   
      ![s2](http://app1.falconide.com/integration_imgs/csharp-vs/screen-2.png)
      
-  3. Installing Dependencies through Nuget Package installer
+     
+  3. Installing dependencies through Nuget Package installer:
   
      ![s3](http://app1.falconide.com/integration_imgs/csharp-vs/screen-3.png)
      
      Browse and Search for **Pepipost - The Official C# library**
      
      ![s4](http://app1.falconide.com/integration_imgs/csharp-vs/screen-4.png)
+     
    
-  4. Install the selected package
+  4. Install the selected package:
     
      ![s5](http://app1.falconide.com/integration_imgs/csharp-vs/screen-5.png)
      
-  5. Once all packages are install the solution explorer will look like below
+     
+  5. Once all packages are install the solution explorer will look like below:
   
      ![s6](http://app1.falconide.com/integration_imgs/csharp-vs/screen-6.png)
 
-     just copy and paste the simpleUsage.md in your program.cs file present in your project.
+     Just copy and paste the simpleUsage.md in your program.cs file present in your project.
 
      build the project shown below OR by clicking **ctrl + shift + F5**
+     
   
-  6. Making Changes in **api_key** and **Sending Domain**
+  6. Update the **api_key** and **FromEmail** parameters
   
-      * apikey will be available under Login to Pepipost -> Settings -> Integration
-      * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
+      * apikey: This will be available under: Login to your Pepipost account -> Settings -> Integration
+      * FromEmail: If your fromemail address is e.g. info@mydomain.com, then the Sending Domain mydomain need to be verified and active under your Pepipost account. You can manage the Sending Domain under: Login to Pepipost -> Settings -> Sending Domains
    
-     ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
+     ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if you have copied the simpleUsage.md)
            
      ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
      
      ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
      
-   7. Building Project to Send Email
-
-      Run the project Press 
+     
+   7. Build the project to finally send your first test email
+      Run the project.
 
       If your apikey and sending domain is proper response message will be success
       
       ![s7](http://app1.falconide.com/integration_imgs/csharp-vs/screen-15.png)
      
      
-# Simple Usage
-
-```csharp
-using System;
-using System.Collections.Generic;
-using Pepipost.Controllers;
-using Pepipost.Models;
-using Pepipost.Exceptions;
-using Pepipost.Utilities;
-using Pepipost.Http;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Linq;
-
-namespace TestConsoleProject
-{
-    class MainClass
-    {
-        public static void Main(string[] args)
-        {
-            //initialization of library
-            Pepipost.PepipostClient client = new Pepipost.PepipostClient();
-            EmailController email = client.Email;
-            EmailBody body = new EmailBody();
-
-            string apiKey = "Your api key here";
-
-            body.Personalizations = new List<Personalizations>();
-
-            Personalizations body_personalizations_0 = new Personalizations();
-
-            body_personalizations_0.Recipient = "rcptemail id here";
-            body_personalizations_0.Attributes = APIHelper.JsonDeserialize<Object>("{}");
-            body.Personalizations.Add(body_personalizations_0);
-
-            body.From = new From();
-
-            body.From.FromEmail = "info@your verified domain";
-            body.From.FromName = "pepi";
-            body.Subject = "Pepipost";
-            body.Content = "<html><body>Hello Folks,<br><br>Congratulations, Integration is Successfully Completed.<br>This is your first email from Pepipost C# library.<br>Happy Emailing<br><br>Thanks,<br>Pepipost";
-            body.Settings = new Settings();
-
-            body.Settings.Footer = 0;
-            body.Settings.Clicktrack = 1;
-            body.Settings.Opentrack = 1;
-            body.Settings.Unsubscribe = 1;
-			SendEmailResponse result = email.CreateSendEmailAsync(apiKey, body).Result;
-
-            try
-            {
-				if(result.Message.Contains("Error")){
-					Console.WriteLine("\n" + "Message ::" + result.Message + "\n" + "Error Code :: " + result.ErrorInfo.ErrorCode + "\n" + "Error Message ::" + result.ErrorInfo.ErrorMessage + "\n");
-				}else{
-					Console.WriteLine("\n" + "Message ::" + result.Message);
-				}
-                
-            }
-            catch (APIException) { };
-
-            Console.WriteLine("Happy Mailing !");
-        }
-    }
-}
-
-```
     
 <a name="announcements"></a>
 # Announcements
