@@ -1,11 +1,7 @@
-# Steps to install C# SDK with Mono-Develop IDE
+# Steps to install C# SDK with Mono-Develop IDE using Git (without Nuget/Package Manager)
 
-  This SDK will help you in integrating Pepipost Web API v2
+If you are using Mono for development and want to integrated with Pepipost directly by using Git, then below steps will help you in integrating this Pepipost C# code library in our IDE.
 
-  2.5.0 version provides full access to the functionality of web API v2 for Sending emails
-
-  The goal is to simplify the complexity of integration and make the library Community Driven. 
-  We require your help to make sure the libraries are built Properly.
   
 ## Prerequisites
     
@@ -26,11 +22,13 @@
       
       ![mygit](http://app1.falconide.com/integration_imgs/csharp-mono/1.png)
       
+      
    2. Start Mono-Develop IDE
    
       Click **open**
       
       ![monoide](http://app1.falconide.com/integration_imgs/csharp-mono/2.png)
+      
       
    3. Select **Pepipost.sln** from unzipped folder 
    
@@ -38,27 +36,31 @@
    
       ![mono](http://app1.falconide.com/integration_imgs/csharp-mono/3.png)
       
-   4. Once you have Opened the Solution the few files will appear with respective SDK
+      
+   4. Once you have opened the solution the few files will appear with respective SDK:
    
-      Add new project to the main directory as Shown below
+      Add new project to the main directory as shown below
       
       ![monoaddpro](http://app1.falconide.com/integration_imgs/csharp-mono/4.png)
       
-   5. Choose Template for new project will be prompted
+      
+   5. Choose template for new project will be prompted
    
       Select **App -> Console Application -> next**
       
       ![appconsole](http://app1.falconide.com/integration_imgs/csharp-mono/5.png)
       
-   6. Configure New project
+      
+   6. Configure new project
    
-      Give an Desired name to your project (testConsole recommended)
+      Give a desired name to your project (testConsole recommended)
       
       ![makeconsole](http://app1.falconide.com/integration_imgs/csharp-mono/6.png)
       
-   7. Resolving Dependencies
+      
+   7. Resolving dependencies
    
-      a. Adding Reference 
+      a. Adding reference 
       
       ![dep1](http://app1.falconide.com/integration_imgs/csharp-mono/7.png)
       
@@ -77,37 +79,43 @@
        search **NewtonSoft.json -> Add packages**
           
        ![dep5](http://app1.falconide.com/integration_imgs/csharp-mono/11.png)
+       
           
    8. Once all the packages are installed successfully 
    
-      just copy and paste the [simpleUsage.md](https://github.com/hellovikram/pepipost-csharp/blob/master/simpleUsage.md) in your program.cs file present in your project.
+      Just copy and paste the [simpleUsage.md](https://github.com/hellovikram/pepipost-csharp/blob/master/simpleUsage.md) in your program.cs file present in your project.
       
-      build the project shown below OR by clicking **F8**
+      Build the project as shown below OR by just hit **F8** to build
       
       ![monol8](http://app1.falconide.com/integration_imgs/csharp-mono/l8.png)
+      
         
-   9.  Grab your **Api_key** and verified **Sending Domain**
-   
-       * apikey will be available under Login to Pepipost -> Settings -> Integration
-       * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
+   9.   Update the api_key and FromEmail parameters:
+
+      * apikey: This will be available under: Login to your Pepipost account -> Settings -> Integration
+      * FromEmail: If your fromemail address is e.g. info@mydomain.com, then the Sending Domain mydomain need to be verified and active under your Pepipost account. You can manage the Sending Domain under: Login to Pepipost -> Settings -> Sending Domains
+       
       
-   10. Change apikey and Sending Domain in script 
+   10. Change apiKey and FromEmail in your script: 
    
-       ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
+      ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
            
-       ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
+      ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
      
-       ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
-     
-   11.  Building Project to Send Email
-   
-        Run the project Press **ctrl + F5**
+      ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
       
-        If your apikey and sending domain is proper response message will be success 
+      
+   11. Build the project to finally send your first test email Run the project.
+   
+       Run the project by hiting **Ctrl + F5**
+      
+       If your apikey and sending domain is proper, then response message will be success. 
       
         ![monol9](http://app1.falconide.com/integration_imgs/csharp-mono/l9.png)
       
-        If there is some problem related with config Error message will be Shown
+       Hope, you have received your first test email 😃
+      
+       If there is some problem related with config, then you will receive error message as shown below:
       
         ![mono10](http://app1.falconide.com/integration_imgs/csharp-mono/l10.png)
 
