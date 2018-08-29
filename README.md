@@ -61,22 +61,20 @@
 # Quick Start
 
 ## How to Build
-
-  1. Download File from [Github](https://github.com/pepipost/pepipost-sdk-csharp/archive/master.zip) unzipped file to your desired location.
   
-  2. Start Microsoft Visual Studio 2017
+  1. Start Microsoft Visual Studio 2017
   
      **File -> New -> Project**
   
      ![s1](http://app1.falconide.com/integration_imgs/csharp-vs/screen-1.png)
      
-  3. Give Desired name to your project 
+  2. Give Desired name to your project 
     
      *TestConsoleProject recommended* 
   
      ![s2](http://app1.falconide.com/integration_imgs/csharp-vs/screen-2.png)
      
-  4. Installing Dependencies through Nuget Package installer
+  3. Installing Dependencies through Nuget Package installer
   
      ![s3](http://app1.falconide.com/integration_imgs/csharp-vs/screen-3.png)
      
@@ -84,11 +82,11 @@
      
      ![s4](http://app1.falconide.com/integration_imgs/csharp-vs/screen-4.png)
    
-  5. Install the selected package
+  4. Install the selected package
     
      ![s5](http://app1.falconide.com/integration_imgs/csharp-vs/screen-5.png)
      
-  6. Once all packages are install the solution explorer will look like below
+  5. Once all packages are install the solution explorer will look like below
   
      ![s6](http://app1.falconide.com/integration_imgs/csharp-vs/screen-6.png)
 
@@ -96,7 +94,7 @@
 
      build the project shown below OR by clicking **ctrl + shift + F5**
   
-  7. Making Changes in **api_key** and **Sending Domain**
+  6. Making Changes in **api_key** and **Sending Domain**
   
       * apikey will be available under Login to Pepipost -> Settings -> Integration
       * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
@@ -107,7 +105,7 @@
      
      ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
      
-   8. Building Project to Send Email
+   7. Building Project to Send Email
 
       Run the project Press 
 
