@@ -1,10 +1,6 @@
-# Step to use Pepipost C# .Net library with Visual Studio 2017
+# Step to integrate Pepipost C# .Net library with Visual Studio 2017 using Git (Without any package manager/Nuget)
 
-This SDK will help you in integrating Pepipost Web API v2 if Nuget Package manager is not installed.
-
-2.5.0 version provides full access to the functionality of web API v2 for Sending emails
-
-The goal is to simplify the complexity of integration and make the library Community Driven. We require your help to make sure the libraries are built Properly.
+If you are using Visual Studio for development and want to integrated with Pepipost directly by using Git, then below steps will help you in integrating this Pepipost C# code library in our IDE.
 
 ## Prerequisites
 
@@ -22,47 +18,48 @@ The goal is to simplify the complexity of integration and make the library Commu
             
     OR ```git clone https://github.com/pepipost/pepipost-sdk-csharp.git```
       
- 2. For starting a new project, right click on the current solution from the *solution explorer* 
+ 2. For starting a new project, right click on the current solution from the *Solution Explorer* 
  
-    choose  ``` Add -> New Project ```.
+    Choose  *Add -> New Project*.
 
     ![Add a new project in the existing solution using Visual Studio](https://apidocs.io/illustration/cs?step=addProject&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
 
- 3. Next, choose "Console Application", provide a ``` TestConsoleProject ``` as the project name 
- 
-    click ``` OK ```.
+
+ 3. Next, choose "Console Application", provide a *TestConsoleProject* as the project name and click *OK*.
 
     ![Create a new console project using Visual Studio](https://apidocs.io/illustration/cs?step=createProject&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
 
- 4. Set as startup project
+
+ 4. **Set as startup project**
 
     The new console project is the entry point for the eventual execution. This requires us to set the ``` TestConsoleProject ``` as the start-up project.
     
-    To do this, right-click on the  ``` TestConsoleProject ```
+    To do this, right-click on the  *TestConsoleProject*
     
-    choose  ``` Set as StartUp Project ``` form the context menu.
+    Choose  *Set as StartUp Project* from the context menu.
 
     ![Set the new cosole project as the start up project](https://apidocs.io/illustration/cs?step=setStartup&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
 
- 5. Add reference of the library project
 
-    In order to use the Pepipost C# library in the new project, first we must add a projet reference to the ``` TestConsoleProject ```. 
-    
-    First, right click on the ``` References ``` node in the *solution explorer*
-    
-    click ``` Add Reference... ```.
+ 5. **Add reference of the library project**
 
-    ![Open references of the TestConsoleProject](https://apidocs.io/illustration/cs?step=addReference&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+    In order to use the Pepipost C# library in the new project, first we need to add a projet reference to the *TestConsoleProject*. 
+    
+    First, right click on the *References* node in the *Solution Explorer*
+    
+    Click *Add Reference*.
 
-    Next, a window will be displayed where we must set the ``` checkbox ``` on ``` PepipostAPI.Standard ``` 
+    ![This Opens the references for the TestConsoleProject](https://apidocs.io/illustration/cs?step=addReference&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+
+    Next, a window will be displayed where we must set the *Checkbox* on *PepipostAPI.Standard* 
     
-    click ``` OK ```. 
+    Click *OK*. 
     
-    By doing this, we have added a reference of the ```PepipostAPI.Standard``` project into the new ``` TestConsoleProject ```.
+    By doing this, we have added a reference of the *PepipostAPI.Standard* project into the new *TestConsoleProject*.
 
     ![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=createReference&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
  
- 6. Once all the packages are installed and **TestConsoleProject** is created, a file named ``` Program.cs ``` will be visible in the *solution explorer* with an empty ``` Main ``` method.
+ 6. Once all the packages are installed and **TestConsoleProject** is created, a file named *Program.cs* will be visible in the *Solution Explorer* with an empty *Main* method.
  
    This is the entry point for the execution of the entire solution.
 
@@ -70,23 +67,30 @@ The goal is to simplify the complexity of integration and make the library Commu
 
   ![Add a reference to the TestConsoleProject](https://apidocs.io/illustration/cs?step=addCode&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
 
- 7. Grab your **Api_key** and verified **Sending Domain**
-   
-       * apikey will be available under Login to Pepipost -> Settings -> Integration
-       * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
+ 7. Update the api_key and FromEmail parameters:
+
+      * apikey: This will be available under: Login to your Pepipost account -> Settings -> Integration
+      * FromEmail: If your fromemail address is e.g. info@mydomain.com, then the Sending Domain mydomain need to be verified and active under your Pepipost account. You can manage the Sending Domain under: Login to Pepipost -> Settings -> Sending Domains
       
- 8. Change apikey and Sending Domain in script 
+ 8. Change apiKey and FromEmail in your script: 
    
-    ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
+      ```string apiKey = "XXXXX-your-api-key-XXXX" ``` (near by line no 25 if your have copy the simpleUsage.md)
            
-    ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
+      ```body_personalizations_0.Recipient = "your recipient emailid here"``` (near by line no 31)
      
-    ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
+      ```body.From.FromEmail = "info@ your-verified-domain"``` (near by line no 37)
      
-  9.  Building Project to Send Email
+  9.  Build the project to finally send your first test email Run the project.
+   
+      Run the project by hiting **Ctrl + F5**
       
-      Press **ctrl + shift + F5** 
-      
-      If your apikey and sending domain is proper response message will be success 
+      If your apikey and sending domain is proper, then response message will be success.
   
       ![s7](http://app1.falconide.com/integration_imgs/csharp-vs/screen-15.png)
+
+      
+      Hope, you have received your first test email 😃
+      
+      If there is some problem related with config, then you will receive error message as shown below:
+      
+      ![mono10](http://app1.falconide.com/integration_imgs/csharp-mono/l10.png)
