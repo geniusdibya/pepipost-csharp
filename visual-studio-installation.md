@@ -1,6 +1,6 @@
 # Step to use Pepipost C# .Net library with Visual Studio 2017
 
-This SDK will help you in integrating Pepipost Web API v2
+This SDK will help you in integrating Pepipost Web API v2 if Nuget Package manager is not installed.
 
 2.5.0 version provides full access to the functionality of web API v2 for Sending emails
 
