@@ -91,14 +91,12 @@
   6. Once all packages are install the solution explorer will look like below
   
      ![s6](http://app1.falconide.com/integration_imgs/csharp-vs/screen-6.png)
-     
-  7. Once all the packages are installed successfully
 
      just copy and paste the simpleUsage.md in your program.cs file present in your project.
 
      build the project shown below OR by clicking **ctrl + shift + F5**
   
-  8. Making Changes in **api_key** and **Sending Domain**
+  7. Making Changes in **api_key** and **Sending Domain**
   
       * apikey will be available under Login to Pepipost -> Settings -> Integration
       * Sending Domain will be available under Login to Pepiost -> Settings -> Sending Domains
