@@ -32,7 +32,7 @@ The goal is to simplify the complexity of integration and make the library Commu
  
     click ``` OK ```.
 
-  ![Create a new console project using Visual Studio](https://apidocs.io/illustration/cs?step=createProject&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
+    ![Create a new console project using Visual Studio](https://apidocs.io/illustration/cs?step=createProject&workspaceFolder=Pepipost%20API-CSharp&workspaceName=PepipostAPI&projectName=PepipostAPI.Standard)
 
  4. Set as startup project
 
