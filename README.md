@@ -1,6 +1,7 @@
 ![pepipostlogo](https://pepipost.com/assets/img/pepipost-footLogo.png)
 
 [![NuGet](https://img.shields.io/nuget/v/Pepipost.svg)](https://www.nuget.org/packages/Pepipost)
+[![Open Source Helpers](https://www.codetriage.com/pepipost/pepipost-sdk-csharp/badges/users.svg)](https://www.codetriage.com/pepipost/pepipost-sdk-csharp)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./LICENSE.txt)
 [![Twitter Follow](https://img.shields.io/twitter/follow/pepi_post.svg?style=social&label=Follow)](https://twitter.com/pepi_post)
 
